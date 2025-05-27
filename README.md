@@ -1,4 +1,4 @@
-This repository contains the source code for Team Flow's website which can be found at teamflow.com
+This repository contains the source code for Team Flow's website which can be found at www.teamflow.com
 
 Team Flow is a biomedical engineering project team at the University of Michigan building a low-cost medical device to reduce IV infusion misadministrations with a simple light based tracking system. Our primary partnerships and affliations are within the University of Michigan and our community partner hospital, the Komfo Anokye Teaching Hospital in Kumasi, Ghana. 
 
