@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Flow</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Sticky Top Banner */
+    .top-banner {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: navy;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+
+    .top-banner a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    .nav-links a {
+      margin: 0 10px;
+    }
+
+    .content {
+      padding-top: 70px;
+      padding-bottom: 150px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #f2f2f2;
+      padding: 20px;
+      position: relative;
+      text-align: center;
+    }
+
+    .footer-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
+
+    .footer-logos img {
+      height: 40px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+    }
+
+    .footer-email {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Banner -->
+  <div class="top-banner">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logos/logo.png" alt="Team Flow Logo">
+        <span>Team Flow</span>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="about.html">About Us</a>
+      <a href="background.html">Background</a>
+      <a href="device.html">Our Device</a>
+      <a href="team.html">Our Team</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Welcome to Team Flow</h1>
+    <p>Team Flow is a biomedical engineering project team at the University of Michigan building a low-cost medical device to reduce IV infusion misadministrations with a simple light based tracking system. Our primary partnerships and affiliations are within the University of Michigan and our community partner hospital, the Komfo Anokye Teaching Hospital in Kumasi, Ghana.</p>
+    <p>We are a passionate group of undergraduate and masters students studying a variety of disciplines across engineering, biological sciences, and business. For more information please reach out at <a href="mailto:mheal-team-flow-leads@umich.edu">mheal-team-flow-leads@umich.edu</a>.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-logos">
+      <img src="logos/block-m-logo.png" alt="Block M">
+      <img src="logos/bme-logo.png" alt="Biomedical Engineering">
+      <img src="logos/lilly-logo.png" alt="Eli Lilly">
+      <img src="logos/mheal-logo.png" alt="M-HEAL">
+      <img src="logos/cfe-logo.png" alt="Center for Entrepreneurship">
+      <img src="logos/komfo-logo.png" alt="Komfo Anokye Teaching Hospital">
+    </div>
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank"><img src="logos/instagram-icon.png" alt="Instagram" height="24"></a>
+        <a href="https://www.linkedin.com" target="_blank"><img src="logos/linkedin-icon.png" alt="LinkedIn" height="24"></a>
+      </div>
+      <div class="footer-email">
+        mheal-team-flow-leads@umich.edu
+      </div>
+    </div>
+  </div>
+</body>
+</html>
