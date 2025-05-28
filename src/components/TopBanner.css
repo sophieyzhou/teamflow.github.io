@@ -1,47 +1,62 @@
+body {
+  padding-top: 80px; /* Increased to match new banner height */
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 .top-banner {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: navy;
-  color: white;
+  background-color: white;
+  color: black;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 16px 20px; /* Increased padding for taller banner */
+  box-sizing: border-box;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: none;
+  height: 80px;
 }
 
 .top-banner .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: black;
+  box-sizing: border-box;
 }
 
 .top-banner .logo img {
-  height: 30px;
-  margin-right: 10px;
+  height: 60px;
+  margin-right: 12px;
 }
 
 .top-banner .nav-links {
   display: flex;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+  align-items: stretch;
 }
 
 .top-banner .nav-links a {
-  box-shadow: inset 0 0 0 0 #54b3d6;
-  color: white;
-  margin: 0 -.25rem;
-  padding: 0 .25rem;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 0;
+  height: 100%;
+  white-space: nowrap;
 }
 
 .top-banner .nav-links a:hover {
-  box-shadow: inset 100px 0 0 0 #54b3d6;
+  background-color: navy;
   color: white;
-}
-
-body {
-  padding-top: 60px; /* To prevent banner from covering content */
+  height: 100%;
 }

@@ -1,16 +1,30 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TopBanner from './components/TopBanner';
 import Footer from './components/Footer';
-import HomePage from './pages/Homepage';
+import HomePage from './pages/HomePage';
+import BackgroundPage from './pages/BackgroundPage';
+import DevicePage from './pages/DevicePage';
+import TeamPage from './pages/TeamPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
-    <div>
+    <Router>
       <TopBanner />
-      <HomePage />
+      
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/background" element={<BackgroundPage />} />
+        <Route path="/device" element={<DevicePage />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+
+      <HomePage/>
+
       <Footer />
-    </div>
+    </Router>
   );
 }
 
 export default App;
-

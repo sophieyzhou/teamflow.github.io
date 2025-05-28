@@ -1,18 +1,18 @@
 import './TopBanner.css';
+import { Link } from 'react-router-dom';
 
 export default function TopBanner() {
   return (
     <div className="top-banner">
-      <a className="logo" href="/">
+      <Link className="logo" to="/">
         <img src="/logos/logo.png" alt="Team Flow" />
-        <span>Team Flow</span>
-      </a>
+      </Link>
       <nav className="nav-links">
-        <a href="/about">About Us</a>
-        <a href="/background">Background</a>
-        <a href="/device">Our Device</a>
-        <a href="/team">Our Team</a>
-        <a href="/contact">Contact Us</a>
+        <Link to="/">Home</Link>
+        <Link to="/background">Background</Link>
+        <Link to="/device">Device</Link>
+        <Link to="/team">Team</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
     </div>
   );
