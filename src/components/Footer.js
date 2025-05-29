@@ -10,6 +10,7 @@ export default function Footer() {
         <img src="/logos/mheal.png" alt="M-HEAL" />
         <img src="/logos/cfe.png" alt="CFE" />
         <img src="/logos/kath.png" alt="Komfo Anokye" />
+        <img src="/logos/stryker.jpg" alt="Stryker" />
       </div>
       <div className="footer-bottom">
         <div className="social-icons">
