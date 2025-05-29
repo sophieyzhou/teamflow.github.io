@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TopBanner from './components/TopBanner';
 import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/Homepage';
 import BackgroundPage from './pages/BackgroundPage';
 import DevicePage from './pages/DevicePage';
 import TeamPage from './pages/TeamPage';
@@ -19,8 +19,6 @@ function App() {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
-
-      <HomePage/>
 
       <Footer />
     </Router>
