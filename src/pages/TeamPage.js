@@ -38,6 +38,13 @@ export default function TeamPage() {
       </p>
       <p>
         Nick we could throw up the greek flag? XD
+        Ok for the team page there will be two sections: at the top will be Our Team and the section under than is going to be Placements. Both of the section titels should be bold and underlined. The our team section should include 5 rows of 3 team member cards per row. Each card will have the team member's name in bold and under that their position in non bolded text. When you hover over each card I want it to transition by easing from top to bottom (.box { 
+  transition: all .3s ease-in-out;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}) to a dark blue card with sea salt white text over it that has a 2 sentence bio for the person. Clicking on any card or each person's name should send you to their linkedin page. Is there any way to store the data for each team member easily somewhere and import from that to populate the page? Like a .csv or sreadsheet where each row is a meebr and the columns are headshot path, name, position, bio, linkedin and make the code read the data into a member class object/custom data structure or even directly to the code? THen fro the placements section I just want the logos from the foler public/placements lilly, stryker, braun, bs, pg, gn, bcg, wayne, nih, bond, snu, greece, pike all .png. the logos should get slightly bigger.raised on hover and clicking should link to the company webpages. Then I want a dark blue horizontal band that stretched across the entire page with quotes from alumni. There should be 3 pages of the band that you transition between either arrows that appear on hover on the right and left side of the band and 3 dots with one shaded darker to show which page you are on. THe pages should also be set to automatically swipe across every 15s on a timer. 
       </p>
       <p>
         Also Maybe a quote from Alex or like an alum like Namit about what team flow taught him and how that's helped him. 
