@@ -5,7 +5,7 @@ const alumniQuotes = [
   },
   {
     quote: "Ahh prepared me so well taught me so much",
-    author: "Namit Panda I will look up how to speel last name, Team Lead 2023"
+    author: "Namit Padgaonkar, Team Lead 2023"
   },
   {
     quote: "Most rewarding thing I did during college so amazing",
