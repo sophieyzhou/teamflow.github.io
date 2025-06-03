@@ -8,9 +8,9 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #02073f; /* navy with 60% opacity */
+  background-color: white; 
   /* opacity: 0.75; */
-  color: white;
+  color: #02073f;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -20,7 +20,12 @@ body {
   z-index: 1000;
   box-shadow: none;
   height: 80px;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
 }
+/* 
+.top-banner.scrolled{
+  opacity:1;
+} */
 
 .top-banner .logo {
   display: flex;
@@ -47,7 +52,7 @@ body {
 }
 
 .top-banner .nav-links a {
-  color: white;
+  color: black;
   padding: 10px 14px;
   text-decoration: none;
   position: relative;
@@ -63,12 +68,12 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #add8e6; /* light blue underline */
+  background-color: #7589cb; /* light blue underline */
   transition: width 0.3s ease;
 }
 
 .top-banner .nav-links a:hover {
-  color: #add8e6; /* light blue text */
+  color: #7589cb; /* light blue text */
 }
 
 .top-banner .nav-links a:hover::after {

@@ -1,33 +1,37 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 55vw; /* dynamic height based on screen width */
+  max-height: 540px; /* cap on very wide screens */
+  min-height: 400px; /* protect small screens */
   background-size: cover;
-  background-position: center;
+  background-position: bottom center;
   background-repeat: no-repeat;
+  background-attachment: scroll; /* Remove fixed for sharper images */
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* instead of center */
+  padding-top: 70px;
   justify-content: center;
-  animation: fadeIn 1s ease-in-out; /* smooth fade in */
-  background-attachment: fixed; /* parallax effect */
+  animation: fadeIn 1s ease-in-out;
 }
 
 .hero-text {
   text-align: center;
   color: white;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 2px 4px #9aa0be;
   padding: 0 20px; /* prevent clipping on mobile */
   animation: fadeInUp 1s ease-in-out; /* text fade + up */
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
-  margin-bottom: 10px;
+  font-size: 5rem;
+  margin-bottom: 5px;
 }
 
 .hero-text h3 {
-  font-size: 1.8rem;
-  font-weight: normal;
+  font-size: 2.5rem;
+  font-weight: 750;
+  margin-top: 5px;
 }
 
 /* Content under the hero */
