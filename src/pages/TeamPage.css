@@ -1,0 +1,144 @@
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 40px 0 20px 0;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  margin-bottom: 80px;
+  padding-left: 120px;
+  padding-right: 120px;
+  box-sizing: border-box;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #02073f;
+  overflow: hidden;
+  border: 1px solid #02073f;
+  transition: all 0.3s ease-in-out;
+  background-color: #f8f8f0;
+  height: 100%;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 360px; 
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #02073f;
+  color: #f8f8f0; /* sea salt white */
+  padding: 20px;
+  box-sizing: border-box;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover .team-card-hover {
+  transform: translateY(0);
+}
+
+.team-card-content {
+  padding: 10px;
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+  text-align: center;
+}
+
+.team-card-content h3 {
+  font-weight: bold;
+  margin: 8px 0 4px 0;
+}
+
+.team-card-content p {
+  margin: 0;
+}
+
+.placements-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.placements-grid img {
+  height: 80px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.placements-grid img:hover {
+  transform: scale(1.1);
+}
+
+.alumni-carousel {
+  background-color: #02073f;
+  color: #f8f8f0;
+  padding: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.quote-slide {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #f8f8f0;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #f8f8f0;
+}

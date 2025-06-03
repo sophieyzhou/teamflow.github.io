@@ -1,20 +1,21 @@
 body {
-  padding-top: 80px; /* Increased to match new banner height */
+  padding-top: 80px;
   margin: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 
 .top-banner {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: white;
-  color: black;
+  background-color: #02073f; /* navy with 60% opacity */
+  /* opacity: 0.75; */
+  color: white;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px; /* Increased padding for taller banner */
+  padding: 16px 20px;
   box-sizing: border-box;
   z-index: 1000;
   box-shadow: none;
@@ -25,7 +26,7 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: black;
+  color: white;
   box-sizing: border-box;
 }
 
@@ -46,17 +47,30 @@ body {
 }
 
 .top-banner .nav-links a {
-  color: black;
+  color: white;
   padding: 10px 14px;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-  border-radius: 0;
+  position: relative;
+  transition: color 0.3s ease;
   height: 100%;
   white-space: nowrap;
 }
 
+.top-banner .nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 8px; /* adjust as needed to position underline */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #add8e6; /* light blue underline */
+  transition: width 0.3s ease;
+}
+
 .top-banner .nav-links a:hover {
-  background-color: navy;
-  color: white;
-  height: 100%;
+  color: #add8e6; /* light blue text */
+}
+
+.top-banner .nav-links a:hover::after {
+  width: 100%; /* animate underline */
 }
