@@ -68,12 +68,12 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #7589cb; /* light blue underline */
+  background-color: #3e5bba; /* light blue underline */
   transition: width 0.3s ease;
 }
 
 .top-banner .nav-links a:hover {
-  color: #7589cb; /* light blue text */
+  color: #3e5bba; /* light blue text */
 }
 
 .top-banner .nav-links a:hover::after {

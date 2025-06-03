@@ -17,11 +17,12 @@ export default function HomePage() {
       <div className="content">
         <p>
           Team Flow is a biomedical engineering project team at the University of Michigan building a low-cost medical device to reduce IV infusion misadministrations with a simple light-based tracking system. Our primary partnerships and affiliations are within the University of Michigan and our community partner hospital, the Komfo Anokye Teaching Hospital in Kumasi, Ghana.
-          <br> Remark: I know this is shitty description there's other stufff I will add to this page don't you worry your little hearts</br>
         </p>
+        <p>Maybe consider instead of image with overlay just carousel like MRacing</p>
         <p>
           We are a diverse group of undergraduate and masters students studying a variety of disciplines across engineering, biological sciences, and business. For more information please reach out at <a href="mailto:mheal-team-flow-leads@umich.edu">mheal-team-flow-leads@umich.edu</a>.
         </p>
+        <p> Remark: I know this is shitty description there's other stufff I will add to this page don't you worry your little hearts</p>
       </div>
     </div>
   );
