@@ -1,4 +1,5 @@
 import './TeamPage.css';
+import teamData from '../data/teamData.json';
 
 export default function TeamPage() {
   return (
