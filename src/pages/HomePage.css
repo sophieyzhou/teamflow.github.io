@@ -42,6 +42,27 @@
   color: #02073f;
 }
 
+.quote-highlight {
+  width: 100%;
+  background-color: #001f54; /* darker cobalt blue */
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 60px; /* whitespace between hero and banner */
+  border-top: 4px solid #002b7f;
+  border-bottom: 4px solid #002b7f;
+}
+
+.quote-highlight-inner {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+
+
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .hero-section {

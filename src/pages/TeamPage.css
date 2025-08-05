@@ -35,6 +35,14 @@
   overflow: hidden;
 }
 
+/* Applies to LazyLoadImage component */
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* crop from the top */
+}
+
 .image-container img {
   width: 100%;
   height: 100%;

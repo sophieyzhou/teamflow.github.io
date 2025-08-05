@@ -1,5 +1,7 @@
 import teamData from '../../data/teamData.json';
 import '../TeamPage.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function TeamMembers() {
   return (
@@ -15,7 +17,14 @@ export default function TeamMembers() {
             rel="noopener noreferrer"
           >
             <div className="image-container">
-              <img src={member.headshot} alt={member.name} />
+              <LazyLoadImage
+                src={member.headshot}
+                alt={member.name}
+                effect="blur"
+                placeholderSrc={member.lowResHeadshot}
+                loading="lazy"
+                className="team-image"
+              />
               <div className="team-card-hover">
                 <p>{member.bio}</p>
               </div>
