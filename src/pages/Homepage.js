@@ -35,10 +35,7 @@ export default function HomePage() {
           For more information please reach out at 
           <a href="mailto:mheal-team-flow-leads@umich.edu">mheal-team-flow-leads@umich.edu</a>.
         </p>
-
-        <p>
-          Remark: I know this is shitty description there's other stuff I will add to this page don't you worry your little hearts.
-        </p>
+        
       </div>
     </div>
   );
