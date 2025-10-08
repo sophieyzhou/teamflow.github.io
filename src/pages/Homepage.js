@@ -15,7 +15,8 @@ export default function HomePage() {
 
       <div className="quote-highlight">
         <div className="quote-highlight-inner">
-          For 80% of the world's population, medical outcomes are not dictated by what technology exists, but rather, by what technology is accessible and financially feasible.
+          For 80% of the world's population, medical outcomes are not dictated by what technology exists, 
+          but rather, by what technology is accessible and financially feasible.
         </div>
       </div>
 
@@ -33,7 +34,7 @@ export default function HomePage() {
           with real-world, cross-functional, product development experience, teaching human centered design, global 
           health research, and problem solving skills necessary to drive innovation. 
           For more information please reach out at 
-          <a href="mailto:mheal-team-flow-leads@umich.edu">mheal-team-flow-leads@umich.edu</a>.
+          <a href="mailto:mheal-team-flow-leads@umich.edu"> mheal-team-flow-leads@umich.edu</a>.
         </p>
         
       </div>
