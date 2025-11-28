@@ -1,13 +1,13 @@
 .footer {
-  background-color: white; /* white top part */
-  padding: 20px 40px 0 40px;
+  background-color: white;
+  padding: 40px 40px 0 40px;
   text-align: center;
   margin-top: 120px;
-  height: 100px;
+  border-top: 2px solid #3e5bba;
 }
 
 .footer-divider {
-  border-top: 2px solid #02073f;
+  border-top: 2px solid #e0e0e0;
   width: 70%;
   margin: 0 auto 30px auto;
 }
@@ -24,12 +24,20 @@
 .footer-logos img {
   height: 60px;
   object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.8;
+}
+
+.footer-logos img:hover {
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 .footer-bottom {
-  background-color: #f2f2f2;
-  padding: 20px 40px;
-  margin-top: 20px;
+  background: linear-gradient(135deg, #f8f8f0 0%, #ffffff 100%);
+  padding: 30px 40px;
+  margin-top: 30px;
+  border-top: 1px solid #e0e0e0;
 }
 
 .footer-bottom-inner {
@@ -59,17 +67,20 @@
 }
 
 .social-icons a:hover img {
-  color: #5362d6;
+  transform: scale(1.15);
+  filter: brightness(1.2);
 }
 
 .footer-email {
   font-size: 14px;
-  color: #333;
+  color: #02073f;
   text-decoration: none;
-  transition: text-decoration 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  font-weight: 500;
 }
 
 .footer-email:hover {
+  color: #3e5bba;
   text-decoration: underline;
 }
 

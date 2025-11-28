@@ -1,9 +1,26 @@
 .section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  text-decoration: underline;
-  margin: 40px 0 20px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 60px 0 40px 0;
   text-align: center;
+  color: #02073f;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #3e5bba;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  letter-spacing: -0.5px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #3e5bba 50%, transparent 100%);
 }
 
 .team-grid {
@@ -22,10 +39,18 @@
   text-decoration: none;
   color: #02073f;
   overflow: hidden;
-  border: 1px solid #02073f;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
   transition: all 0.3s ease-in-out;
-  background-color: #f8f8f0;
+  background-color: #ffffff;
   height: 100%;
+  box-shadow: 0 2px 8px rgba(2, 7, 63, 0.08);
+}
+
+.team-card:hover {
+  border-color: #3e5bba;
+  box-shadow: 0 4px 16px rgba(62, 91, 186, 0.2);
+  transform: translateY(-4px);
 }
 
 .image-container {
@@ -68,10 +93,11 @@
 }
 
 .team-card-content {
-  padding: 10px;
+  padding: 15px;
   background-color: white;
   transition: background-color 0.3s ease-in-out;
   text-align: center;
+  border-top: 1px solid #f0f0f0;
 }
 
 .team-card-content h3 {
@@ -87,25 +113,36 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   margin-bottom: 60px;
+  padding: 30px;
+  background-color: #f8f8f0;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
 }
 
 .placements-grid img {
   height: 80px;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  filter: grayscale(20%);
+  opacity: 0.85;
 }
 
 .placements-grid img:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
+  filter: grayscale(0%);
+  opacity: 1;
 }
 
 .alumni-carousel {
-  background-color: #02073f;
+  background: linear-gradient(135deg, #02073f 0%, #001f54 100%);
   color: #f8f8f0;
-  padding: 40px;
+  padding: 60px 40px;
   position: relative;
   text-align: center;
+  border-top: 4px solid #3e5bba;
+  border-bottom: 4px solid #3e5bba;
+  box-shadow: 0 4px 16px rgba(2, 7, 63, 0.2);
 }
 
 .quote-slide {
