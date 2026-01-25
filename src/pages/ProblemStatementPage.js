@@ -1,4 +1,5 @@
 import './BackgroundPage.css';
+//import KATH from '../background/KATH.jpg';
 
 export default function ProblemStatementPage() {
   return (
@@ -8,14 +9,25 @@ export default function ProblemStatementPage() {
         <div className="header-accent"></div>
       </div>
       <div className="content-section">
-        <h2>Public Health Context</h2>
-        <p>
-          We will write some stuff about the public health, socioeconomic barriers, etc that frame the context for our project. The content from this page should be drawn from needs assessments, academic literature, etc. 
-          Consider 3 drop downs to separate pages about the need for our device from a health and economic standpoint and one subpage on KATH. 
-          Debate renaming this "Context" or "Background"
-          At the Komfo Anokye Teaching Hospial in Kumasi, Ghana, one major effect(?) of economic constraints 
-          is limited access to IV infusion pumps. This means that the IV delivery process is highly manual, and requires 
-          nurses to manually count drips to set infusion speeds for IVs that are then left unmonitored, despite freque
+        <h2>IV INFUSION ERRORS ARE 
+        PREVENTABLE</h2>
+        <p> <strong>Current Status:</strong>{' '}
+          Current Status: In low- and middle-income countries (LMICs), intravenous (IV) infusions commonly 
+          rely on gravity drip systems, where fluid flow is manually adjusted using a roller clamp to constrain the flow of the IV line. 
+          Gravity setups lack real-time monitoring, making them prone to 
+          fluctuations caused by tubing wear, patient movement, or bag depletion. As a result, clinicians must visually 
+          estimate  drip rates, often leading to inaccurate dosing, overinfusion, or backflow, which compromise patient safety.
+        </p>
+        <p> <strong>Available Technologies:</strong>{' '}
+          Available Technologies: Electronic infusion pumps represent the highest standard of IV administration, monitoring and 
+          regulating the flow of medication. While they offer precise control in high-resource settings, their high cost, 
+          maintenance requirements, and power dependence limit their use in LMICs. Other alternatives, such as mechanical regulators 
+          on the IV line, allow initial flow rate setting but do not remain consistent over time, are single-use, and provide no real-time feedback.
+        </p>
+        <p> <strong>Need:</strong>{' '}
+          Need: Consequently, most facilities in LMICs lack affordable, reliable tools to monitor and maintain accurate IV flow rates. 
+          There is a critical need for a low-cost, reusable monitoring technology to enhance dosing accuracy and improve patient 
+          outcomes in resource-limited settings.
         </p>
       </div>
     </div>
