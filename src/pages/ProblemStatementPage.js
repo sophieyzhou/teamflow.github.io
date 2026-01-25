@@ -1,5 +1,5 @@
 import './BackgroundPage.css';
-//import KATH from '../background/KATH.jpg';
+//import KATH from '/Users/prachitilwankar/teamflow.github.io/public/background/KATH.jpg';
 
 export default function ProblemStatementPage() {
   return (
@@ -9,8 +9,25 @@ export default function ProblemStatementPage() {
         <div className="header-accent"></div>
       </div>
       <div className="content-section">
-        <h2>IV INFUSION ERRORS ARE 
-        PREVENTABLE</h2>
+
+        
+      <h2 style={{ textAlign: 'center', fontWeight: 'normal', margin: '20px 0' }}>
+        <strong style={{ fontWeight: 'bold' }}>IV INFUSION ERRORS</strong> are <strong style={{ fontWeight: 'bold' }}>PREVENTABLE</strong>
+      </h2>
+
+      <h3 style={{ textAlign: 'center', fontWeight: 'normal', margin: '20px 0' }}>
+        “Over 90% of our patients receive unregulated, unmonitored infusions, risking medical complications, extended stays, and...fatalities arising from misadministration.”
+        - Dr. Chris Oppong, KATH
+      </h3>
+
+      <img 
+        src="/background/KATH.jpg" 
+        alt="Dr. Chris Oppong at KATH" 
+        style={{ maxWidth: '80%', height: 'auto', borderRadius: '8px', display: 'block', margin: '20px auto' }} 
+      />
+
+
+
         <p> <strong>Current Status:</strong>{' '}
           Current Status: In low- and middle-income countries (LMICs), intravenous (IV) infusions commonly 
           rely on gravity drip systems, where fluid flow is manually adjusted using a roller clamp to constrain the flow of the IV line. 
@@ -29,8 +46,10 @@ export default function ProblemStatementPage() {
           There is a critical need for a low-cost, reusable monitoring technology to enhance dosing accuracy and improve patient 
           outcomes in resource-limited settings.
         </p>
+
       </div>
     </div>
+
   );
 }
 
