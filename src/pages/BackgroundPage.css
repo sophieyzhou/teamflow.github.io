@@ -66,6 +66,32 @@
   margin-bottom: 20px;
 }
 
+/* Overview block: text left, image right on wide screens; stacked on small screens */
+.overview-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 20px 0 40px 0;
+}
+
+.overview-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.overview-image {
+  width: 320px;
+  flex: 0 0 320px;
+}
+
+.overview-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(2, 7, 63, 0.08);
+}
+
 /* Responsive design */
 @media (max-width: 900px) {
   .content {
@@ -84,5 +110,461 @@
   .content-section h2 {
     font-size: 1.5rem;
   }
+
+  .overview-block {
+    flex-direction: column;
+  }
+
+  .overview-image {
+    width: 100%;
+    flex: 0 0 auto;
+  }
 }
+
+/* --- How We Stay Connected (icons + cards) --- */
+.section-subtitle {
+  margin: 0 0 20px 0;
+  color: rgba(2, 7, 63, 0.85);
+  font-size: 1.05rem;
+}
+
+.connect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.connect-card {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(62, 91, 186, 0.18);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(2, 7, 63, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.connect-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(2, 7, 63, 0.10);
+  border-color: rgba(62, 91, 186, 0.32);
+}
+
+.connect-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  background: linear-gradient(135deg, rgba(62, 91, 186, 0.18), rgba(2, 7, 63, 0.10));
+}
+
+.connect-title {
+  margin: 0 0 6px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #02073f;
+}
+
+.connect-text {
+  margin: 0;
+  color: rgba(2, 7, 63, 0.9);
+  line-height: 1.7;
+  text-align: left; /* keeps these cards from looking weird with justified text */
+}
+
+.callout-tight {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.callout-icon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(62, 91, 186, 0.12);
+}
+
+/* Responsive: 3 -> 1 column */
+@media (max-width: 900px) {
+  .connect-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Project History Timeline ---------- */
+
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 28px auto 0;
+  padding: 10px 0 30px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  transform: translateX(-50%);
+  background: #e6e6e6;
+  border-radius: 999px;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 84px 1fr;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.timeline-item.left .timeline-card {
+  grid-column: 1;
+  justify-self: end;
+  text-align: right;
+}
+
+.timeline-item.right .timeline-card {
+  grid-column: 3;
+  justify-self: start;
+  text-align: left;
+}
+
+.timeline-node {
+  grid-column: 2;
+  justify-self: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 3px solid #d7d7d7;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+
+.timeline-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.timeline-card {
+  width: min(420px, 100%);
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-year {
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.timeline-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.timeline-detail {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #444;
+}
+
+/* Responsive: stack into single column with line on the left */
+@media (max-width: 860px) {
+  .timeline {
+    padding-left: 10px;
+  }
+
+  .timeline-line {
+    left: 22px;
+    transform: none;
+  }
+
+  .timeline-item {
+    grid-template-columns: 64px 1fr;
+    padding: 14px 0;
+  }
+
+  .timeline-node {
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  .timeline-card {
+    grid-column: 2 !important;
+    justify-self: start !important;
+    text-align: left !important;
+    width: 100%;
+  }
+}
+
+
+/* --- Subtitle under section title --- */
+.section-subtitle {
+  margin: 0 0 20px 0;
+  color: rgba(2, 7, 63, 0.85);
+  font-size: 1.05rem;
+}
+
+/* --- Connect cards (you already reference these classes) --- */
+.connect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.connect-card {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(62, 91, 186, 0.18);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(2, 7, 63, 0.06);
+}
+
+.connect-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  background: linear-gradient(135deg, rgba(62, 91, 186, 0.18), rgba(2, 7, 63, 0.10));
+}
+
+.connect-title {
+  margin: 0 0 6px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #02073f;
+}
+
+/* --- Callout improvements (POC section) --- */
+.callout-tight {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.callout-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.callout-image {
+  width: 140px;
+  flex: 0 0 140px;
+}
+
+.callout-image img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(2, 7, 63, 0.10);
+}
+
+/* --- Slideshow --- */
+.slideshow {
+  margin: 16px 0 18px 0;
+}
+
+.slideshow-frame {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(2, 7, 63, 0.10);
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(2, 7, 63, 0.35);
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.slide-btn:hover {
+  background: rgba(2, 7, 63, 0.5);
+}
+
+.slide-btn-left {
+  left: 12px;
+}
+
+.slide-btn-right {
+  right: 12px;
+}
+
+.slide-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background: rgba(2, 7, 63, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.slide-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(62, 91, 186, 0.35);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.dot.active {
+  background: #3e5bba;
+  transform: scale(1.2);
+}
+
+.travel-caption {
+  margin-top: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .connect-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slideshow-frame {
+    height: 260px;
+  }
+
+  .callout-tight {
+    flex-direction: column;
+  }
+
+  .callout-image {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .callout-image img {
+    height: 220px;
+  }
+}
+
+/* --- Recent Travels split layout (text left, portrait slideshow right) --- */
+.travel-split {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr; /* more space for text, less for portrait photo */
+  gap: 26px;
+  align-items: start;
+  margin-top: 12px;
+}
+
+.travel-body {
+  margin: 0 0 14px 0;
+}
+
+.travel-bullets {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.travel-bullets li {
+  margin-bottom: 8px;
+}
+
+.travel-image {
+  width: 600px;
+  flex: 0 0 320px;
+}
+
+.travel-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(2, 7, 63, 0.08);
+}
+
+/* Portrait slideshow sizing */
+.slideshow-frame-portrait {
+  height: 520px;         /* taller for portrait */
+  max-width: 360px;      /* keep it from getting too wide */
+  margin-left: auto;     /* align to right nicely */
+  margin-right: auto;
+}
+
+/* Caption under photo */
+.travel-photo-caption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: rgba(2, 7, 63, 0.85);
+  text-align: center;
+}
+
+/* Responsive stacking */
+@media (max-width: 900px) {
+  .travel-split {
+    grid-template-columns: 1fr;
+  }
+
+  .slideshow-frame-portrait {
+    height: 360px;
+    max-width: 100%;
+  }
+}
+
+
 
